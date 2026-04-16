@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+
+    <link href="meera.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
+    <style type="text/css">
+        a#vlb {
+            display: none
+        }
+    </style>
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <style type="text/css">
+        .style3 {
+            width: 378px;
+        }
+
+        .style4 {
+            width: 533px;
+        }
+
+        .style7 {
+            width: 100%;
+        }
+
+        .style8 {
+            width: 100%;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="top">
+
+            <table class="style7">
+                <tr>
+
+                    <div style="width: 100%; display: flex; align-items: center; padding: 10px; background-color: #4D6A6D;">
+                        <!-- Logo -->
+                        <div style="flex: 0 0 auto; text-align: left; margin-right: 20px;">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png" Style="height: 80px;" />
+                        </div>
+
+
+
+
+                        <!-- Search Box and Button -->
+                        <div style="position: absolute; top: 10px; right: -5px;">
+                            <asp:TextBox ID="txtsearch" runat="server" Width="200px" BackColor="#C5C5C5"
+                                BorderColor="#4D6A6D" BorderStyle="Solid" BorderWidth="1px" Height="30px"
+                                Style="padding-left: 10px; font-size: 14px;" placeholder="Search here..."></asp:TextBox>
+                            <asp:Button ID="Button9" runat="server" Text="Search" OnClick="Button2_Click"
+                                Width="80px" CssClass="btn" CausesValidation="False" Height="30px"
+                                Style="font-size: 14px; background-color: #272727; color: #C5C5C5; border: none; cursor: pointer; position: relative; top: 70px; right: 95px" />
+                        </div>
+                    </div>
+
+
+
+
+                </tr>
+            </table>
+        </div>
+        <div id="menu">
+
+            <table class="style2" style="display: flex; justify-content: end; align-items: flex-start; width: 100%; height: 50px;">
+                <tr>
+                    <td>
+                        <asp:Button ID="Button3" runat="server" Text="HOME" CssClass="btnmenu"
+                            PostBackUrl="~/Home.aspx" CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button ID="Button4" runat="server" Text="SIGN UP" CssClass="btnmenu"
+                            PostBackUrl="~/Registration.aspx" CausesValidation="False" />
+                    </td>
+
+                    <td>
+                        <asp:Button ID="Button6" runat="server" Text="PRODUCT" CssClass="btnmenu"
+                            PostBackUrl="~/PRODUCT.aspx" CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button ID="Button7" runat="server" Text="FEEDBACK" CssClass="btnmenu"
+                            PostBackUrl="~/Feedback.aspx" CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button ID="Button8" runat="server" Text="ADMIN" CssClass="btnmenu"
+                            PostBackUrl="~/admin/login.aspx" CausesValidation="False" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        <div id="aitem">
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+
+    </form>
+    <div id="foot" style="clear: both; padding-top: 40px; height: auto; margin-top: 20px;">
+
+        <!-- Contact Information Section -->
+        <div style="float: left; width: 45%; text-align: left;">
+            <strong>Contact Us:</strong><br />
+            Email: pukar@ecommerce.com<br />
+            Phone: +977 9800000000<br />
+            Address: Pu Kar Ko Gh Ar, Kaski, 33700, Nepal<br />
+
+        </div>
+
+        <!-- Social Media Icons Section -->
+        <div style="float: right; width: 45%; text-align: center;">
+            <br />
+            <strong>Follow Us:</strong><br />
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="images/social/facebook.png" alt="Facebook" style="width: 40px; height: 40px; margin: 10px;" />
+            </a>
+            <a href="https://www.instagram.com/yourpage" target="_blank">
+                <img src="images/social/instagram.png" alt="Instagram" style="width: 40px; height: 40px; margin: 10px;" />
+            </a>
+            <a href="https://www.twitter.com/yourpage" target="_blank">
+                <img src="images/social/twitter.png" alt="Twitter" style="width: 40px; height: 40px; margin: 10px;" />
+            </a>
+        </div>
+
+        <!-- Footer Text at Center -->
+        <div style="clear: both; text-align: center; margin-top: 40px;">
+            All Rights Reserved @online Ghadi Pasal
+        </div>
+    </div>
+
+</body>
+</html>

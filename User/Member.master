@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Member.master.cs" Inherits="User_Member" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="USER.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1 {
+            width: 1050px;
+        }
+
+        .style2 {
+            width: 219px;
+            font-weight: 700;
+            color: #339933;
+            font-size: x-large;
+            font-family: cursive;
+        }
+
+        .style3 {
+            width: 32px;
+        }
+
+        .style4 {
+            width: 504px;
+        }
+
+        .style5 {
+            width: 155px;
+        }
+
+        .style6 {
+            width: 257px;
+            margin-left: 0px;
+            margin-right: 50px;
+        }
+
+        .style8 {
+            width: 100%;
+        }
+
+        .style9 {
+            width: 383px;
+            margin-right: 0px;
+        }
+
+        .style10 {
+            width: 257px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="headd" height="950">
+            <table class="style1">
+    <tr>
+        <!-- Logo Section -->
+        
+        <td class="style2" style="flex: 0 0 auto; text-align: left; margin-right: 20px;">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png" Style="height: 80px;" />
+        </td>
+        
+        <!-- Search Section -->
+        <td class="style4" style="text-align: right; position: relative; top:10px; left:300px">
+            <asp:TextBox ID="TextBox1" runat="server" BorderColor="#272727" BackColor="#C5C5C5"
+                BorderStyle="Solid" BorderWidth="1px" Height="30px" Width="200px"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" CssClass="btn" Height="30px" 
+                Text="Search" OnClick="Button1_Click" 
+                Style="font-size: 14px; background-color: #272727; color: #C5C5C5; border: none; cursor: pointer; " 
+                />
+        </td>
+        
+        <td class="style5">&nbsp;</td>
+        
+        <!-- User Section -->
+        <td>
+            <table class="style6" style="width: 100%; position: relative; top: 10px; left: 400px">
+                <tr>
+                    <td class="style10">
+                        <asp:Label ID="lblname" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+                            PostBackUrl="~/Home.aspx" CausesValidation="False" CssClass="mnulnk">LogOut</asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+            <div id="mnu">
+                <table class="style8">
+                    <tr>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="mnulnk"
+                                PostBackUrl="~/User/Default.aspx" CausesValidation="False">Home</asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton4" runat="server" CssClass="mnulnk"
+                                PostBackUrl="~/User/MyAccount.aspx" CausesValidation="False">My Account</asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton5" runat="server" CssClass="mnulnk"
+                                PostBackUrl="~/User/MyOrder.aspx" CausesValidation="False">My Order</asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton6" runat="server" CssClass="mnulnk"
+                                PostBackUrl="~/User/MyPayment.aspx" CausesValidation="False">My Payment</asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="mnulnk"
+                                PostBackUrl="~/User/MyCart.aspx" CausesValidation="False">My Cart</asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton7" runat="server" CssClass="mnulnk"
+                                PostBackUrl="~/User/ChangePass.aspx" CausesValidation="False">ChangePassword</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="main" style="background: #949B96">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div id="footer" style="clear: both; height: auto;" >
+
+        <!-- Contact Information Section -->
+        <div style="float: left; width: 45%; text-align: left;">
+            <strong>Contact Us:</strong><br />
+            Email: pukar@ecommerce.com<br />
+            Phone: +977 9800000000<br />
+            Address: Pu Kar Ko Gh Ar, Kaski, 33700, Nepal<br />
+
+        </div>
+
+        <!-- Social Media Icons Section -->
+        <div style="float: right; width: 45%; text-align: center;">
+            <br />
+            <strong>Follow Us:</strong><br />
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="~/images/facebook.png" alt="Facebook" style="width: 40px; height: 40px; margin: 10px;" />
+            </a>
+            <a href="https://www.instagram.com/yourpage" target="_blank">
+                <img src="~/images/instagram.png" alt="Instagram" style="width: 40px; height: 40px; margin: 10px;" />
+            </a>
+            <a href="https://www.twitter.com/yourpage" target="_blank">
+                <img src="~/images/twitter.png" alt="Twitter" style="width: 40px; height: 40px; margin: 10px;" />
+            </a>
+        </div>
+
+        <!-- Footer Text at Center -->
+        <div style="clear: both; text-align: center; margin-top: 20px;">
+            All Rights Reserved @online Ghadi Pasal
+        </div>
+    </div>
+</body>
+</html>
